@@ -5,6 +5,21 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
     assert_response :success
     assert_select '.product', 3
+    assert_select '.category', 3
+  end
+  
+  test "render a list of products filtered by category" do
+    get products_path(category_id: categories(:computers).id)
+    assert_response :success
+    assert_select '.product', 1
+  end
+  
+  test "render a list of products filtered by min_price and max_price" do
+    get products_path(min_price: 160, max_price: 200)
+
+    assert_response :success
+    assert_select '.product', 1
+    assert_select 'h2', 'Nintendo Swicth'
   end
 
   test "render a detailed product page" do
@@ -22,7 +37,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select 'form'
   end
 
-  test "allows to crate a new product" do
+  test "allows to create a new product" do
     post products_path, params: {
       product: {
         title: 'Nintendo 64',
@@ -35,7 +50,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_equal flash[:notice], 'Tu producto se ha creado correctamente'
   end
 
-  test "does not allow to crate a new product with empty fields" do
+  test "does not allow to create a new product with empty fields" do
     post products_path, params: {
       product: {
         title: '',
