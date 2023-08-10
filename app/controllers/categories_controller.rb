@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
 
   def index
-    @categories = Category.all
+    @categories = Category.all.order(name: :asc)
   end
 
   def new
@@ -20,7 +20,6 @@ class CategoriesController < ApplicationController
       else
         render :new, status: :unprocessable_entity 
       end
-    end
   end
 
   def update
@@ -29,7 +28,6 @@ class CategoriesController < ApplicationController
       else
         render :edit, status: :unprocessable_entity 
       end
-    end
   end
 
   def destroy
