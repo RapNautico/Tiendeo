@@ -8,6 +8,9 @@ en:
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
+        category_id: 'Categories'
+      category:
+        name: 'Name'
     errors:
       models:
         product:
@@ -24,6 +27,7 @@ en:
   shared:
     header:
       add: 'Add product'
+      categories: 'Categories'
   products:
     edit:
       title: 'Edit product'
@@ -31,6 +35,7 @@ en:
       title: 'Add product'
     index:
       title: 'Products:'
+      all: 'All'
     show:
       edit: 'Edit product'
       delete: 'Delete product'
