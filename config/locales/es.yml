@@ -1,4 +1,6 @@
 es:
+  app_name: 'Tiendeo'
+  meta_title: 'Compra hermosas y lindas prendas'
   activerecord:
     models:
       product: Producto

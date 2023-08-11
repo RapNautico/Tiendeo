@@ -1,4 +1,6 @@
 en:
+  app_name: 'Tended'
+  meta_title: 'Buy beautiful clothes'
   activerecord:
     models:
       product: Product
