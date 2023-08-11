@@ -9,6 +9,10 @@
             
         <%= form.number_field :max_price, placeholder: t('.max_price'),
             onChange: 'this.form.requestSubmit()', value: params[:max_price] %>
+        
+        <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map {
+            |order| [t(".#{order}"), order]}, params[:order_by]), 
+            {}, { onChange: 'this.form.requestSubmit()' } %>
     <% end %>
     <h2><%= t('.title') %></h2>
 
@@ -16,6 +20,8 @@
 
     <%= render partial: 'category', collection: @categories %>
 
-    <%= render partial: 'product', collection: @products %>
+    <div class="products">
+        <%= render partial: 'product', collection: @products %>
+    </div>
 
 <% end %>
