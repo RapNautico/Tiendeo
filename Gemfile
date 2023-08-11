@@ -30,6 +30,10 @@ gem "jbuilder"
 # Postgresql fulltextsearch
 gem "pg_search", "~> 2.3"
 
+# Pagination
+# gem "pagy", "~> 6.0"
+gem "pagy", "~> 5.10"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
