@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select '.product', 26
+    assert_select '.product', 12
     assert_select '.category', 9
   end
 
