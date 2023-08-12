@@ -33,7 +33,11 @@ es:
   authentication:
     users:
       create:
-        created: 'Tu cuenta se ha creado'
+        created: 'Tu cuenta se ha creado!'
+    sessions:
+      create:
+        created: 'Bienvenido!'
+        failed: 'Login inválido!'
   products:
     edit:
       title: 'Editar producto'
