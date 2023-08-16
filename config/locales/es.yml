@@ -93,3 +93,7 @@ es:
   favorites:
     index:
       title: 'Mis favoritos'
+  user_mailer:
+    welcome:
+      subject: 'Bienvenido a Tiendeo'
+      welcome_message: 'Hey %{username}, bienvenid@ a Tiendeo. Esperemos que vendas un montón!'

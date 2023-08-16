@@ -92,3 +92,7 @@ en:
   favorites:
     index:
       title: 'My favorites'
+  user_mailer:
+    welcome:
+      subject: 'Welcome to Tended'
+      welcome_message: 'Hey %{username}, welcome to Tended. We hope you sell a lot!'
